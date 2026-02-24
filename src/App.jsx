@@ -17,7 +17,7 @@ function App() {
   const [message, setMessage] = useState("...Loading...");
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/hello")
+    fetch("/api/hello")
       .then((r) => r.json())
       .then((d) => setMessage(d.message))
       .catch(() => setMessage("Failed to load"));
